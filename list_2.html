@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			html,body{margin:0;padding:0;width:100%;height:100%;}
+			#bg{background: url(img/list_bg.png) no-repeat left top;background-size: cover;position:absolute;z-index:1;
+				width:100%;height:100%;top:0;left:0;
+				-webkit-filter: blur(60px);
+		    	-moz-filter: blur(60px);
+		    	-ms-filter: blur(60px);    
+		        filter: blur(60px);
+		    }
+		    #container{position:relative;z-index:2;top:0;left:0;margin:100px auto;width:1280px;height:720px;background:url(img/list2_bj.jpg) no-repeat;box-shadow: 0 0 150px #fff;}
+			#video{
+				position: absolute;
+			    z-index: 10;
+			    top: 290px;
+			    left: 638px;
+			    width: 480px;
+			    border-radius: 24px;
+			    height:325px;
+			    overflow:hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bg"></div>
+		<div id="container">
+			<div id="video">
+				<embed src="http://player.youku.com/player.php/sid/XMTY4MTc3MDY4OA==/v.swf" allowFullScreen="true" quality="high" width="480" height="325" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			</div>
+		</div>
+	</body>
+</html>

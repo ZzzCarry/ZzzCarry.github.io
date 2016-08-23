@@ -1,0 +1,107 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱你到白头</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="keyword">2011</span> 年  <span class="keyword">9</span> 月   <span class="keyword">4</span> 号<br />
+			这一天对于一个叫  <span class="keyword">周子植 </span> 的男孩是非常难忘的<br />
+			他向一个叫   <span class="keyword">齐飞</span> 的女孩诉说了埋藏在心里很久的秘密<br />
+			并且在那一天他们确立恋爱关系<br />
+			<br />
+			异地恋有时确实让人感觉到绝望<br />
+			<span class="keyword">4,5</span> 个小时的电话煲并不能减轻对另一半的思念<br />
+			因此他们不得不选择跨越 <span class="keyword">149.4</span> 公里的路程<br />
+			历经 <span class="keyword">4</span> 个小时相聚在一起<br />
+			<br />
+			恋爱本来就不可能一帆风顺<br />
+			大大小小的争吵,喋喋不休的抱怨随时发生<br />
+			但是没有经历过磨难和风雨考验的爱情又怎么会刻苦铭心<br />
+			只要彼此相爱,不管经历什么挫折困苦最后都会在一起<br />
+			<br />
+			<span class="placeholder"/>农历  <span class="keyword">二〇一六</span> 年  <span class="keyword">九</span> 月   初 <span class="keyword">八</span></span><br />
+			我 <span class="keyword">周子植 </span> 将郑重地迎娶我美丽的新娘 <span class="keyword">齐飞 </span><br />
+			我们经历了这么多最后终于走到了一起<br />
+			<br />
+			<span class="placeholder"/>此刻</span>
+			I want to say:<br />
+			Baby, I love you forever;<br />
+			
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你直到永永远远。<br/>
+					<div class="signature">- 爱你的老公</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		<a href="#">....</a><br />
+		<a href="#">....</a><br />
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2011, 0, 4);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
